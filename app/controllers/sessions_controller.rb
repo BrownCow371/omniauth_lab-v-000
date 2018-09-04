@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    @auth = auth
+    @auth = auth_hash
     @user = User.find_or_create_by_omniauth(@auth)
     raise @user.inspect
     session[:user_id] = @user.id
