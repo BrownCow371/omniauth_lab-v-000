@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     session[:user_id] = @user.id
   end
 
-  def auth
+  def auth_hash
     request.env['omniauth.auth']
   end
 end
